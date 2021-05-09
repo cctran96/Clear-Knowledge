@@ -68,6 +68,7 @@ body {
   padding: 20px 40px 40px;
   margin-top: 50px;
   align-items: center;
+  width: 630px;
 }
 
 .info-card img {
@@ -86,7 +87,6 @@ body {
 }
 
 .info-card a {
-  flex: 1 1 auto;
   color: whitesmoke;
   text-decoration: none;
   margin-bottom: 5px;
