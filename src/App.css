@@ -77,8 +77,8 @@ body {
   margin-right: 10px;
 }
 
-.info-card .profile-pic {
-  margin: 20px 30px 0 0;
+.info-card .picture{
+  margin: 10px 30px 10px 0;
   height: 200px;
   width: 200px;
   -o-object-fit: contain;
@@ -99,4 +99,63 @@ body {
 
 .details h3 {
   text-align: center;
+}
+
+.search {
+  font-size: 20px;
+  height: 30px;
+  width: 50%;
+}
+
+
+/* Flip Cards */
+:root {
+  --time: 0.707s ;
+}
+
+.cards {
+  display: flex;
+  flex-flow: column;
+}
+
+.card {
+  margin-top: 50px;
+  perspective: 40rem;
+}
+
+.card-body {
+  transform-style: preserve-3d;
+  transition: var(--time) transform;
+}
+
+.card:hover .card-body {
+  transform: rotateY(-180deg);
+}
+
+.card-front, .card-back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card-front {
+  display: flex;
+}
+
+.card-front img {
+  align-self: flex-start;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.card-front .info {
+  flex: 1 1 auto;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: rotateY(-180deg);
 }
