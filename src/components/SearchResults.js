@@ -1,25 +1,13 @@
 import React from 'react'
+import BookCard from './BookCard'
 
 const SearchResults = ({books}) => {
-    const card = books ? books.map(book => {
-        const img = book.cover_i ?
-        `http://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` :
-        'https://image.shutterstock.com/image-vector/no-user-profile-picture-hand-260nw-99335579.jpg'
+    const card = books ? books.map(book => 
+        {
         return (
-            <div key={book.key} className='card'>
-                <div className="card-body">
-                    <div className="card-front">
-                        <img src={img} alt={book.title}/>
-                        <div className="info">
-                            <p><i>{book.title}</i></p>
-                            <p><b>by {book.author_name}</b></p>
-                        </div>
-                    </div>
-                    <div className="card-back">
-                        <p>Some info here</p>
-                    </div>
-                </div>
-            </div> 
+            <div>
+                <BookCard book = {book}/>
+            </div>
         )
     }) : null
     return(
