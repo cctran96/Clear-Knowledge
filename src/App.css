@@ -110,7 +110,7 @@ body {
 
 /* Flip Cards */
 :root {
-  --time: 0.707s ;
+  --time: 1s ;
 }
 
 .cards {
