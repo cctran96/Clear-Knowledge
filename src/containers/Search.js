@@ -6,9 +6,9 @@ const url = 'https://www.googleapis.com/books/v1/volumes?q='
 
 class Search extends Component {
     state={
-        previousSearch: '',
         searchInput: '',
-        books: []
+        books: [],
+        currentBook: null
     }
 
     handleInput = e => {
@@ -28,6 +28,10 @@ class Search extends Component {
         })
     }
 
+    viewBookDetails = book => {
+        this.setState({currentBook: this.state.currentBook ? '' : book})
+      }
+
     render(){
         return(
             <div className='page-title'>
@@ -40,8 +44,8 @@ class Search extends Component {
                 <SearchResults 
                     books={this.state.books.items} 
                     currentUser={this.props.currentUser} 
-                    currentBook={this.props.currentBook}
-                    viewBookDetails={this.props.viewBookDetails}
+                    currentBook={this.state.currentBook}
+                    viewBookDetails={this.viewBookDetails}
                     returnToSearch={this.returnToSearch}
                 />
             </div>
