@@ -13,6 +13,8 @@ const fetchUsers = () => fetch(usersURL).then(r => r.json())
 class App extends React.Component {
   state={
     users: [],
+    comments: [],
+    favorites: [],
     currentUser: ''
   }
 
@@ -60,7 +62,7 @@ class App extends React.Component {
             <Navbar />
             <Route exact path="/" component={() => <Home handleLogin={this.handleLogin} handleLogout={this.handleLogout} createAccount={this.createAccount} currentUser={this.state.currentUser}/>}/>
             <Route path="/aboutus" component={AboutUs}/>
-            <Route path="/search" component={Search}/>
+            <Route path="/search" component={() => <Search currentUser={this.state.currentUser}/>}/>
             <Route path="/profile" component={() => <Profile currentUser={this.state.currentUser}/>}/>
         </div>
       </Router>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Form from '../components/Form'
 import SearchResults from '../components/SearchResults'
 
-const url = 'http://openlibrary.org/search.json?title='
+const url = 'https://www.googleapis.com/books/v1/volumes?q='
 
 class Search extends Component {
     state={
@@ -31,7 +31,7 @@ class Search extends Component {
             <div className='page-title'>
                 <h2>Search for a book</h2>
                 <Form input={this.state.searchInput} handleInput={this.handleInput} fetchResults={this.fetchResults}/>
-                <SearchResults books={this.state.books.docs}/>
+                <SearchResults books={this.state.books.items} currentUser={this.props.currentUser}/>
             </div>
         )
     }

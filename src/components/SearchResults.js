@@ -1,9 +1,10 @@
 import React from 'react'
 import BookCard from './BookCard'
 
-const SearchResults = ({books}) => {
+const SearchResults = ({books, currentUser}) => {
     const card = books ? books.map(book => {
-    return <BookCard key={book.key} book={book}/>
+        console.log(book)
+        return <BookCard key={book.id} book={book} currentUser={currentUser}/>
     }) : null
     
     return(

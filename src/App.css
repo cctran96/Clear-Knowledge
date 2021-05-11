@@ -107,59 +107,6 @@ body {
   width: 50%;
 }
 
-
-/* Flip Cards */
-:root {
-  --time: 1s ;
-}
-
-.cards {
-  display: flex;
-  flex-flow: column;
-}
-
-.card {
-  margin-top: 50px;
-  perspective: 40rem;
-}
-
-.card-body {
-  transform-style: preserve-3d;
-  transition: var(--time) transform;
-}
-
-.card:hover .card-body {
-  transform: rotateY(-180deg);
-}
-
-.card-front, .card-back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.card-front {
-  display: flex;
-}
-
-.card-front img {
-  align-self: flex-start;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-.card-front .info {
-  flex: 1 1 auto;
-}
-
-.card-back {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: rotateY(-180deg);
-}
-
 .login, .create {
   display: none;
 }
@@ -181,4 +128,58 @@ button {
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+/* Flip Cards */
+.cards {
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.card {
+  perspective: 40rem;
+  margin-top: 60px;
+  margin-left: 100px;
+  width: 100%;
+}
+
+.card-body {
+  transform-style: preserve-3d;
+  transition: 1s;
+  height: 400px;
+}
+
+.card:hover .card-body {
+  transform: rotateY(-180deg);
+}
+
+.card-front, .card-back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card-front {
+  display: flex;
+}
+
+.card-front img {
+  align-self: flex-start;
+  width: 150px;
+  height: 250px;
+}
+
+.card-front .info {
+  flex: 1 1 auto;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  transform: rotateY(-180deg);
 }

@@ -6,5 +6,19 @@
       "password": "password"
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "id": 1,
+      "username": "chautran",
+      "bookId": "jaM7DwAAQBAJ"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "bookId": "jaM7DwAAQBAJ",
+      "username": "chautran",
+      "comment": "I love this book."
+    }
+  ]
 }
