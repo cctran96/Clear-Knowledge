@@ -1,15 +1,29 @@
 import React from 'react'
 import BookCard from './BookCard'
 
-const SearchResults = ({books, currentUser}) => {
+const SearchResults = ({books, currentBook, currentUser, viewBookDetails}) => {
     const card = books ? books.map(book => {
-        console.log(book)
-        return <BookCard key={book.id} book={book} currentUser={currentUser}/>
+        return (
+            <BookCard 
+                key={book.id} 
+                book={book} 
+                currentBook={currentBook} 
+                currentUser={currentUser}
+                viewBookDetails={viewBookDetails}
+            />
+        )
     }) : null
     
     return(
-        <div className='cards'>
-            {card}
+        <div className='card-container'>
+            {currentBook ? 
+            <BookCard 
+                book={currentBook} 
+                currentBook={currentBook} 
+                currentUser={currentUser} 
+                viewBookDetails={viewBookDetails}
+            /> 
+            : card}
         </div>
     )
 }

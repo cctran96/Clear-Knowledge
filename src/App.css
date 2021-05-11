@@ -130,56 +130,58 @@ button {
   margin-right: 10px;
 }
 
-/* Flip Cards */
-.cards {
-  width: 90%;
+/* Cards */
+@keyframes bounce {
+  20%, 50%, 80%, to {
+    transform: translateY(0);
+  }
+  40%{
+    transform: translateY(-30px);
+  }
+  70%{
+    transform: translateY(-15px);
+  }
+  90%{
+    transform: translateY(-4px)
+  }
+}
+
+.card-container {
   display: flex;
   flex-flow: column;
   align-items: center;
+  perspective: 700px;
 }
 
 .card {
-  perspective: 40rem;
-  margin-top: 60px;
-  margin-left: 100px;
-  width: 100%;
+  margin-top: 25px;
+}
+
+.card button {
+  margin-bottom: 25px;
 }
 
 .card-body {
-  transform-style: preserve-3d;
-  transition: 1s;
-  height: 400px;
-}
-
-.card:hover .card-body {
-  transform: rotateY(-180deg);
-}
-
-.card-front, .card-back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.card-front {
   display: flex;
+  padding: 25px 40px 25px;
+  align-items: center;
+  justify-content: center;
+  width: 680px;
 }
 
-.card-front img {
-  align-self: flex-start;
-  width: 150px;
-  height: 250px;
+.card-container:hover .card:hover{
+  animation: bounce 0.7s linear;
+  border: 1px solid whitesmoke;
 }
 
-.card-front .info {
-  flex: 1 1 auto;
+.card-body img {
+  justify-content: flex-start;
+  margin-right: 30px;
 }
 
-.card-back {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: auto;
-  transform: rotateY(-180deg);
+.card-info {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  justify-content: center;
 }

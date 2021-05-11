@@ -6,6 +6,7 @@ const url = 'https://www.googleapis.com/books/v1/volumes?q='
 
 class Search extends Component {
     state={
+        previousSearch: '',
         searchInput: '',
         books: []
     }
@@ -21,6 +22,7 @@ class Search extends Component {
         fetch(url + this.state.searchInput).then(r => r.json()).then(books => {
             this.setState({
                 books,
+                previousSearch: this.state.searchInput,
                 searchInput: ''
             })
         })
@@ -30,8 +32,18 @@ class Search extends Component {
         return(
             <div className='page-title'>
                 <h2>Search for a book</h2>
-                <Form input={this.state.searchInput} handleInput={this.handleInput} fetchResults={this.fetchResults}/>
-                <SearchResults books={this.state.books.items} currentUser={this.props.currentUser}/>
+                <Form 
+                    input={this.state.searchInput} 
+                    handleInput={this.handleInput} 
+                    fetchResults={this.fetchResults}
+                />
+                <SearchResults 
+                    books={this.state.books.items} 
+                    currentUser={this.props.currentUser} 
+                    currentBook={this.props.currentBook}
+                    viewBookDetails={this.props.viewBookDetails}
+                    returnToSearch={this.returnToSearch}
+                />
             </div>
         )
     }

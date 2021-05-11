@@ -15,7 +15,8 @@ class App extends React.Component {
     users: [],
     comments: [],
     favorites: [],
-    currentUser: ''
+    currentUser: null,
+    currentBook: null
   }
 
   componentDidMount(){
@@ -55,6 +56,10 @@ class App extends React.Component {
       })
   }
 
+  viewBookDetails = book => {
+    this.setState({currentBook: this.state.currentBook ? null : book})
+  }
+
   render(){
     return (
       <Router>
@@ -62,8 +67,8 @@ class App extends React.Component {
             <Navbar />
             <Route exact path="/" component={() => <Home handleLogin={this.handleLogin} handleLogout={this.handleLogout} createAccount={this.createAccount} currentUser={this.state.currentUser}/>}/>
             <Route path="/aboutus" component={AboutUs}/>
-            <Route path="/search" component={() => <Search currentUser={this.state.currentUser}/>}/>
-            <Route path="/profile" component={() => <Profile currentUser={this.state.currentUser}/>}/>
+            <Route path="/search" component={() => <Search viewBookDetails={this.viewBookDetails} currentUser={this.state.currentUser} currentBook={this.state.currentBook}/>}/>
+            <Route path="/profile" component={() => <Profile viewBookDetails={this.viewBookDetails} currentUser={this.state.currentUser}/>}/>
         </div>
       </Router>
     )
