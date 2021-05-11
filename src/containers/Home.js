@@ -15,13 +15,23 @@ class Home extends Component {
     }
 
     handleClick = e => {
-        const login = e.target.parentNode.lastChild
-        login.classList.toggle('show')
+        const login = document.querySelector('.login')
+        const create = document.querySelector('.create')
+        const toggleBoth = () => {
+            create.classList.toggle('show')
+            login.classList.toggle('show')
+        }
+        create.className.includes('show') ? toggleBoth() : login.classList.toggle('show')
     }
 
     showAccount = () => {
-        const form = document.querySelector('.create')
-        form.classList.toggle('show')
+        const login = document.querySelector('.login')
+        const create = document.querySelector('.create')
+        const toggleBoth = () => {
+            create.classList.toggle('show')
+            login.classList.toggle('show')
+        }
+        login.className.includes('show') ? toggleBoth() : create.classList.toggle('show')
     }
 
     newInfo = e => {
@@ -32,7 +42,7 @@ class Home extends Component {
 
     render(){
         return(
-            <div className='page-title'>
+            <div className='page-title home'>
                 {this.props.currentUser ? 
                 <div>
                     <p>You are signed in as <i>{this.props.currentUser}</i></p>
@@ -43,6 +53,7 @@ class Home extends Component {
                     <button onClick={this.handleClick}>Login</button>
                     <button onClick={this.showAccount}>Create an account</button>
                     <div className='create'>
+                        <h4>Glad that you're joining us!</h4>
                         <form onSubmit={e => this.props.createAccount(e, this.state.newUser, this.state.newPass)}>
                             <label>Enter a username: </label>
                             <input type="text" name="newUser" value={this.state.newUser} onChange={this.newInfo}/>
@@ -52,6 +63,7 @@ class Home extends Component {
                         </form>
                     </div>
                     <div className='login'>
+                        <h4>Welcome back!</h4>
                         <form onSubmit={e => this.props.handleLogin(e, this.state.username, this.state.password)}>
                             <label>Username: </label>
                             <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
