@@ -1,12 +1,10 @@
 {
-    "users":[
-        {
-            "id": 1,
-            "username": "chautran",
-            "password": "password"
-        }
-    ],
-    "favorites": [
-
-    ]
+  "users": [
+    {
+      "id": 1,
+      "username": "chautran",
+      "password": "password"
+    }
+  ],
+  "favorites": []
 }
