@@ -5,7 +5,7 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails}) => {
     const img = info.imageLinks ? info.imageLinks.thumbnail : 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg'
 
     return (
-        <div className='card'>
+        <div className='card hover'>
             <div className="card-body">
                 <img src={img} alt={info.title}/>
                 <div className="card-info">
@@ -17,11 +17,11 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails}) => {
                 </div>
             </div>
             <div>
-                <p>{currentBook ? (info.description ? info.description : 'No description available.') : null}</p>
                 <button onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
                 <button>Add to my library</button>
             </div>
-            {currentUser ? <div>
+            {currentBook ? <div className='additional-info'>
+                <h3>Description:</h3>
                 <p>{info.description ? info.description : 'No description available.'}</p>
             </div> : null}
         </div> 

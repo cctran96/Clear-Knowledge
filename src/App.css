@@ -131,19 +131,10 @@ button {
 }
 
 /* Cards */
-@keyframes bounce {
-  20%, 50%, 80%, to {
-    transform: translateY(0);
-  }
-  40%{
-    transform: translateY(-30px);
-  }
-  70%{
-    transform: translateY(-15px);
-  }
-  90%{
-    transform: translateY(-4px)
-  }
+.hover:hover {
+  cursor: pointer;
+  background-color: rgb(228, 222, 222);
+  color: black;
 }
 
 .card-container {
@@ -155,6 +146,7 @@ button {
 
 .card {
   margin-top: 25px;
+  transition: 0.5s;
 }
 
 .card button {
@@ -169,11 +161,6 @@ button {
   width: 680px;
 }
 
-.card-container:hover .card:hover{
-  animation: bounce 0.7s linear;
-  border: 1px solid whitesmoke;
-}
-
 .card-body img {
   justify-content: flex-start;
   margin-right: 30px;
@@ -184,4 +171,12 @@ button {
   flex-flow: column;
   align-self: center;
   justify-content: center;
+}
+
+.additional-info {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-flow: column;
+  text-align: left;
 }
