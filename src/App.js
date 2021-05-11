@@ -8,7 +8,8 @@ import Profile from './containers/Profile'
 import Search from './containers/Search'
 
 const usersURL = 'http://localhost:3001/users/'
-const fetchUsers = () => fetch(usersURL).then(r => r.json())
+const commentsURL = 'http://localhost:3001/comments'
+const fetchData = url => fetch(url).then(r => r.json())
 
 class App extends React.Component {
   state={
@@ -19,12 +20,13 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    fetchUsers().then(users => this.setState({users: users.map(user => user.username)}))
+    fetchData(usersURL).then(users => this.setState({users: users.map(user => user.username)}))
+    fetchData(commentsURL).then(comments => this.setState({comments}))
   }
 
   handleLogin = (e, u, p) => {
     e.preventDefault()
-    fetchUsers().then(data => {
+    fetchData(usersURL).then(data => {
         const passed = data.find(user => user.username === u && user.password === p)
         passed ? this.setState({currentUser: u, username: '', password: ''}) : alert("The information you have entered is incorrect.")
     })
@@ -62,8 +64,8 @@ class App extends React.Component {
             <Navbar />
             <Route exact path="/" component={() => <Home handleLogin={this.handleLogin} handleLogout={this.handleLogout} createAccount={this.createAccount} currentUser={this.state.currentUser}/>}/>
             <Route path="/aboutus" component={AboutUs}/>
-            <Route path="/search" component={() => <Search currentUser={this.state.currentUser}/>}/>
-            <Route path="/profile" component={() => <Profile currentUser={this.state.currentUser}/>}/>
+            <Route path="/search" component={() => <Search comments={this.state.comments} currentUser={this.state.currentUser}/>}/>
+            <Route path="/profile" component={() => <Profile comments={this.state.comments} currentUser={this.state.currentUser}/>}/>
         </div>
       </Router>
     )

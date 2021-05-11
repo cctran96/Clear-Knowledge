@@ -124,7 +124,7 @@ body {
   display: none;
 }
 
-button {
+.home button {
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -150,7 +150,8 @@ button {
 }
 
 .card button {
-  margin-bottom: 25px;
+    margin: 10px 10px 25px 10px;
+
 }
 
 .card-body {
@@ -179,4 +180,28 @@ button {
   display: flex;
   flex-flow: column;
   text-align: left;
+}
+
+/* Comments */
+.comments {
+  list-style: none;
+}
+
+.comments li {
+  display: flex;
+  align-items: center;
+}
+
+.comments img {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.comments b {
+  font-size: 20px;
+}
+
+.comments p {
+  font-size: 15px;
 }

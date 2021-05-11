@@ -47,6 +47,7 @@ class Search extends Component {
                     currentBook={this.state.currentBook}
                     viewBookDetails={this.viewBookDetails}
                     returnToSearch={this.returnToSearch}
+                    comments={this.props.comments}
                 />
             </div>
         )

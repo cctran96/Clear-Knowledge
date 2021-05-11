@@ -2,8 +2,63 @@
   "users": [
     {
       "id": 1,
-      "username": "chautran",
+      "username": "Chau",
       "password": "password"
+    },
+    {
+      "username": "Jasper",
+      "password": "password",
+      "id": 3
+    },
+    {
+      "username": "Lantz",
+      "password": "password",
+      "id": 4
+    },
+    {
+      "username": "Marc",
+      "password": "password",
+      "id": 5
+    },
+    {
+      "username": "Diana",
+      "password": "password",
+      "id": 6
+    },
+    {
+      "username": "Christian",
+      "password": "password",
+      "id": 7
+    },
+    {
+      "username": "Kyle",
+      "password": "password",
+      "id": 8
+    },
+    {
+      "username": "Miles",
+      "password": "password",
+      "id": 9
+    },
+    {
+      "username": "Zach",
+      "password": "password",
+      "id": 10
+    },
+    {
+      "username": "Harman",
+      "password": "password",
+      "id": 11
+    },
+    {
+      "username": "Johndhee",
+      "password": "password",
+      "id": 12
+    },
+    {
+      "username": "Raymond",
+      "password": "password",
+      "id": 13
     }
   ],
   "favorites": [
@@ -17,8 +72,80 @@
     {
       "id": 1,
       "bookId": "jaM7DwAAQBAJ",
-      "username": "chautran",
+      "username": "Chau",
       "comment": "I love this book."
+    },
+    {
+      "id": 2,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Dante",
+      "comment": "Nice chain ↓"
+    },
+    {
+      "id": 3,
+      "bookId": "jJ-s8snbHCIC",
+      "username": "Jasper",
+      "comment": "This book is boring."
+    },
+    {
+      "id": 4,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Lantz",
+      "comment": "Nice"
+    },
+    {
+      "id": 5,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Marc",
+      "comment": "Nice"
+    }
+    ,    {
+      "id": 6,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Diana",
+      "comment": "Nice"
+    },
+    {
+      "id": 7,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Christian",
+      "comment": "Nice"
+    },
+    {
+      "id": 8,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Kyle",
+      "comment": "Nice"
+    },
+    {
+      "id": 9,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Miles",
+      "comment": "Nice"
+    },
+    {
+      "id": 10,
+      "bookId": "PGR2AwAAQBAJ",
+      "username": "Zach",
+      "comment": "Great story!"
+    },
+    {
+      "id": 11,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Harman",
+      "comment": "Nice"
+    },
+    {
+      "id": 12,
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "Johndhee",
+      "comment": "Nice"
+    },
+    {
+      "id": 13,
+      "bookId": "Pv5zZ9R4DskC",
+      "username": "Raymond",
+      "comment": "Such an amazing book."
     }
   ]
 }
