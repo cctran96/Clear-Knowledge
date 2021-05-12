@@ -71,8 +71,8 @@ class App extends React.Component {
             <Navbar />
             <Route exact path="/" component={() => <Home handleLogin={this.handleLogin} handleLogout={this.handleLogout} createAccount={this.createAccount} currentUser={this.state.currentUser}/>}/>
             <Route path="/aboutus" component={AboutUs}/>
-            <Route path="/search" render={() => <Search comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
-            <Route path="/profile" render={() => <Profile comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
+            <Route path="/search" render={() => <Search comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment} viewBookDetails={this.viewBookDetails}/>}/>
+            <Route path="/profile" render={() => <Profile comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment} viewBookDetails={this.viewBookDetails}/>}/>
         </div>
       </Router>
     )
