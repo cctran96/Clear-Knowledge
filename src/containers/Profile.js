@@ -25,7 +25,7 @@ class Profile extends Component {
     submitChanges = (e) => {
         e.preventDefault()
         const obj = {
-            name: this.state.Name,
+            name: this.state.name,
             location: this.state.location,
             bio: this.state.bio
         }
