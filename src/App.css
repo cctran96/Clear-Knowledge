@@ -174,7 +174,6 @@ body {
   text-align: left;
 }
 
-/* Comments */
 .comments {
   list-style: none;
 }
@@ -198,7 +197,6 @@ body {
   font-size: 15px;
 }
 
-/* Profile */
 textarea {
   height: 100px;
 }

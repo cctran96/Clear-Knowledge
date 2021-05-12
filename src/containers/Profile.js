@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ProfileForm from '../components/ProfileForm'
+import BookCard from "../components/BookCard"
 
 const usersURL = 'http://localhost:3001/users/'
 
@@ -41,6 +42,14 @@ class Profile extends Component {
         .then(this.setState({edit: !this.state.edit}))
     }
 
+    filterBooks = (book) => {
+        if(this.props.currentUser.username){
+            if (book.currentUser.username === this.props.currentUser.username) {
+                return <BookCard key={book.book.id} book={book.book} currentUser={this.props.currentUser} favoriteBook = {this.props.favoriteBook}/>
+            }
+        }
+      }
+
     render(){
         const user = this.props.currentUser
         return(
@@ -65,6 +74,7 @@ class Profile extends Component {
                         </div>}
                         {this.state.edit ? null : <button onClick={this.handleEdit}>Edit Profile</button>}
                     </div>
+                    {this.props.favorites.map(book => this.filterBooks(book))}
                 </div> :
                 <div>
                     <h2>Log in to access your profile</h2>

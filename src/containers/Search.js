@@ -27,6 +27,8 @@ class Search extends Component {
         })
     }
 
+    
+
     render(){
         return(
             <div className='page-title'>
@@ -44,6 +46,7 @@ class Search extends Component {
                     returnToSearch={this.returnToSearch}
                     comments={this.props.comments}
                     handleNewComment={this.props.handleNewComment}
+                    favoriteBook = {this.props.favoriteBook}
                 />
             </div>
         )

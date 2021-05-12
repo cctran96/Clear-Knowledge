@@ -9,6 +9,7 @@ import Search from './containers/Search'
 
 const usersURL = 'http://localhost:3001/users/'
 const commentsURL = 'http://localhost:3001/comments'
+const favoritesURL = 'http://localhost:3001/favorites'
 const fetchData = url => fetch(url).then(r => r.json())
 const postConfig = body => ({method: 'POST',headers: {'Content-Type': 'application/json','Accept': 'application/json'},body: JSON.stringify(body)})
 
@@ -24,6 +25,7 @@ class App extends React.Component {
   componentDidMount(){
     fetchData(usersURL).then(users => this.setState({users: users.map(user => user.username)}))
     fetchData(commentsURL).then(comments => this.setState({comments}))
+    fetchData(favoritesURL).then(favorites => this.setState({favorites}))
   }
 
   handleLogin = (e, u, p) => {
@@ -64,15 +66,56 @@ class App extends React.Component {
     this.setState({currentBook: this.state.currentBook ? '' : book})
   }
 
+  favoriteBook = (book, currentUser) => {
+    console.log("adding!")
+    const addedBook = {
+        book: book,
+        currentUser: currentUser
+    }
+    const postConfig = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(addedBook)
+    }
+    if(currentUser !== null){
+      fetch('http://localhost:3001/favorites', postConfig)
+      .then(res => res.json())
+      .then(data => {this.setState({favorites: [...this.state.favorites, data]})})
+    }
+    
+}
+
   render(){
     return (
       <Router>
         <div className='container'>
             <Navbar />
-            <Route exact path="/" component={() => <Home handleLogin={this.handleLogin} handleLogout={this.handleLogout} createAccount={this.createAccount} currentUser={this.state.currentUser}/>}/>
+            <Route exact path="/" component={() => <Home 
+              handleLogin={this.handleLogin} 
+              handleLogout={this.handleLogout} 
+              createAccount={this.createAccount} 
+              currentUser={this.state.currentUser}/>}/>
             <Route path="/aboutus" component={AboutUs}/>
-            <Route path="/search" render={() => <Search comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment} viewBookDetails={this.viewBookDetails}/>}/>
-            <Route path="/profile" render={() => <Profile comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment} viewBookDetails={this.viewBookDetails}/>}/>
+            <Route path="/search" render={() => <Search  
+              comments={this.state.comments} 
+              currentBook={this.state.currentBook} 
+              currentUser={this.state.currentUser} 
+              handleNewComment={this.handleNewComment}
+              favoriteBook = {this.favoriteBook}
+              viewBookDetails={this.viewBookDetails}
+              />}/>
+            <Route path="/profile" render={() => <Profile 
+              comments={this.state.comments} 
+              currentBook={this.state.currentBook} 
+              currentUser={this.state.currentUser} 
+              favorites = {this.state.favorites}
+              handleNewComment={this.handleNewComment}
+              favoriteBook = {this.favoriteBook}
+              viewBookDetails={this.viewBookDetails}
+              />}/>
         </div>
       </Router>
     )

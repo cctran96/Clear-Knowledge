@@ -1,7 +1,7 @@
 import React from 'react'
 import CommentForm from '../components/CommentForm'
 
-const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment}) => {
+const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment, favoriteBook}) => {
     const info = book.volumeInfo
     const img = info.imageLinks ? info.imageLinks.thumbnail : 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg'
     const bookComments = comments ? comments.filter(comment => comment.bookId === book.id) : null
@@ -21,7 +21,7 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
             </div>
             <div>
                 <button onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
-                <button>Add to my library</button>
+                <button onClick={() => favoriteBook(book, currentUser)}>Add to my library</button>
             </div>
             {currentBook ? <div className='additional-info'>
                 <h3>Description:</h3>
