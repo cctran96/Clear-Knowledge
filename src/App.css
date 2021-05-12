@@ -111,17 +111,8 @@ body {
   display: none;
 }
 
-.login input, .create input {
-  margin-right: 20px;
-  margin-top: 10px;
-}
-
 .show {
   display: block;
-}
-
-.submit-btn {
-  display: none;
 }
 
 .home button {
@@ -183,7 +174,6 @@ body {
   text-align: left;
 }
 
-/* Comments */
 .comments {
   list-style: none;
 }
@@ -205,4 +195,25 @@ body {
 
 .comments p {
   font-size: 15px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.login label, .login input, .create label, .create input, .profile label, .profile input {
+  margin: 0 auto;
+}
+
+.login input, .create input, .profile input {
+  margin-bottom: 30px;
+  display: block;
+}
+
+label {
+  display: block;
+}
+
+.login .submit-btn, .create .submit-btn {
+  display: none;
 }

@@ -18,7 +18,7 @@ class App extends React.Component {
     users: [],
     comments: [],
     favorites: [],
-    currentUser: null,
+    currentUser: '',
     currentBook: null
   }
 
@@ -137,7 +137,9 @@ class App extends React.Component {
               favorites = {this.state.favorites}
               handleNewComment={this.handleNewComment}
               favoriteBook = {this.favoriteBook}
-              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}/>}/>
+              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}
+              viewBookDetails={this.viewBookDetails}
+              />}/>
             <Route path="/profile" render={() => <Profile 
               comments={this.state.comments} 
               currentBook={this.state.currentBook} 
@@ -145,7 +147,9 @@ class App extends React.Component {
               favorites = {this.state.favorites}
               handleNewComment={this.handleNewComment}
               favoriteBook = {this.favoriteBook}
-              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}/>}/>
+              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}
+              viewBookDetails={this.viewBookDetails}
+              />}/>
         </div>
       </Router>
     )
