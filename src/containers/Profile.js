@@ -5,6 +5,7 @@ import BookCard from "../components/BookCard"
 const usersURL = 'http://localhost:3001/users/'
 
 class Profile extends Component {
+
     state={
         edit: false,
         name: this.props.currentUser.name,
@@ -83,7 +84,19 @@ class Profile extends Component {
                         </div>}
                         {this.state.edit ? null : <button onClick={this.handleEdit}>Edit Profile</button>}
                     </div>
-                    {this.props.favorites.map(book => this.filterBooks(book))}
+                    {this.props.currentBook ? 
+                            <BookCard 
+                                book={this.props.currentBook} 
+                                currentBook={this.props.currentBook} 
+                                currentUser={this.props.currentUser}
+                                viewBookDetails={this.props.viewBookDetails}
+                                handleNewComment={this.props.handleNewComment}
+                                comments = {this.props.comments}
+                                favoriteBook = {this.props.favoriteBook}
+                                favorites = {this.props.favorites}
+                                isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}
+                            />
+                        : this.props.favorites.map(book => this.filterBooks(book))}
                 </div> :
                 <div>
                     <h2>Log in to access your profile</h2>
