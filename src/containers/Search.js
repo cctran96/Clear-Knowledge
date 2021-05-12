@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from '../components/Form'
+import SearchForm from '../components/SearchForm'
 import SearchResults from '../components/SearchResults'
 
 const url = 'https://www.googleapis.com/books/v1/volumes?q='
@@ -36,7 +36,7 @@ class Search extends Component {
         return(
             <div className='page-title'>
                 <h2>Search for a book</h2>
-                <Form 
+                <SearchForm 
                     input={this.state.searchInput} 
                     handleInput={this.handleInput} 
                     fetchResults={this.fetchResults}
@@ -48,6 +48,7 @@ class Search extends Component {
                     viewBookDetails={this.viewBookDetails}
                     returnToSearch={this.returnToSearch}
                     comments={this.props.comments}
+                    handleNewComment={this.props.handleNewComment}
                 />
             </div>
         )

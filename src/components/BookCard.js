@@ -1,6 +1,7 @@
 import React from 'react'
+import CommentForm from '../components/CommentForm'
 
-const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments}) => {
+const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment}) => {
     const info = book.volumeInfo
     const img = info.imageLinks ? info.imageLinks.thumbnail : 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg'
     const bookComments = comments ? comments.filter(comment => comment.bookId === book.id) : null
@@ -37,6 +38,7 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments}) =
                         )
                     })}
                 </ul>}
+                {currentUser ? <CommentForm handleNewComment={handleNewComment} currentUser={currentUser} bookId={book.id}/> : <p>Log in to comment</p>}
             </div> : null}
         </div> 
     )

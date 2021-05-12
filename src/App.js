@@ -10,6 +10,7 @@ import Search from './containers/Search'
 const usersURL = 'http://localhost:3001/users/'
 const commentsURL = 'http://localhost:3001/comments'
 const fetchData = url => fetch(url).then(r => r.json())
+const postConfig = body => ({method: 'POST',headers: {'Content-Type': 'application/json','Accept': 'application/json'},body: JSON.stringify(body)})
 
 class App extends React.Component {
   state={
@@ -38,18 +39,18 @@ class App extends React.Component {
     })
   }
 
+  handleNewComment = comment => {
+    fetch(commentsURL, postConfig(comment)).then(r => r.json()).then(data => {
+      this.setState({
+        comments: [...this.state.comments, data]
+      })
+    })
+  }
+
   createAccount = (e, u, p) => {
     e.preventDefault()
-    const config = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({username: u, password: p})
-    }
     this.state.users.includes(u) ? alert('There is already someone with that username!') 
-    :fetch(usersURL, config).then(r => r.json()).then(data => {
+    :fetch(usersURL, postConfig({username: u, password: p})).then(r => r.json()).then(data => {
       this.setState(
         {currentUser: data.username, 
           users: [...this.state.users, data.username]
@@ -64,8 +65,8 @@ class App extends React.Component {
             <Navbar />
             <Route exact path="/" component={() => <Home handleLogin={this.handleLogin} handleLogout={this.handleLogout} createAccount={this.createAccount} currentUser={this.state.currentUser}/>}/>
             <Route path="/aboutus" component={AboutUs}/>
-            <Route path="/search" component={() => <Search comments={this.state.comments} currentUser={this.state.currentUser}/>}/>
-            <Route path="/profile" component={() => <Profile comments={this.state.comments} currentUser={this.state.currentUser}/>}/>
+            <Route path="/search" component={() => <Search comments={this.state.comments} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
+            <Route path="/profile" component={() => <Profile comments={this.state.comments} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
         </div>
       </Router>
     )

@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "username": "Chau",
+      "username": "chautran",
       "password": "password"
     },
     {
@@ -72,7 +72,7 @@
     {
       "id": 1,
       "bookId": "jaM7DwAAQBAJ",
-      "username": "Chau",
+      "username": "chautran",
       "comment": "I love this book."
     },
     {
@@ -98,8 +98,8 @@
       "bookId": "9cFdAAAAQBAJ",
       "username": "Marc",
       "comment": "Nice"
-    }
-    ,    {
+    },
+    {
       "id": 6,
       "bookId": "9cFdAAAAQBAJ",
       "username": "Diana",
@@ -146,6 +146,12 @@
       "bookId": "Pv5zZ9R4DskC",
       "username": "Raymond",
       "comment": "Such an amazing book."
+    },
+    {
+      "bookId": "9cFdAAAAQBAJ",
+      "username": "chautran",
+      "comment": "Nice",
+      "id": 14
     }
   ]
 }

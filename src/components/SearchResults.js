@@ -1,7 +1,7 @@
 import React from 'react'
 import BookCard from './BookCard'
 
-const SearchResults = ({books, currentBook, currentUser, viewBookDetails, comments}) => {
+const SearchResults = ({books, currentBook, currentUser, viewBookDetails, comments, handleNewComment}) => {
     const card = books ? books.map(book => {
         return (
             <BookCard 
@@ -10,6 +10,7 @@ const SearchResults = ({books, currentBook, currentUser, viewBookDetails, commen
                 currentBook={currentBook} 
                 currentUser={currentUser}
                 viewBookDetails={viewBookDetails}
+                handleNewComment={handleNewComment}
             />
         )
     }) : null
@@ -23,6 +24,7 @@ const SearchResults = ({books, currentBook, currentUser, viewBookDetails, commen
                 currentUser={currentUser} 
                 viewBookDetails={viewBookDetails}
                 comments={comments}
+                handleNewComment={handleNewComment}
             /> 
             : card}
         </div>
