@@ -105,7 +105,308 @@
       "bio": ""
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "book": {
+        "kind": "books#volume",
+        "id": "cDKODQAAQBAJ",
+        "etag": "vdMJBhsNdjQ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/cDKODQAAQBAJ",
+        "volumeInfo": {
+          "title": "Cosmos",
+          "authors": [
+            "Carl Sagan"
+          ],
+          "publisher": "Ballantine Books",
+          "publishedDate": "2013",
+          "description": "Presents an illustrated guide to the universe and to Earth's relationship to it, moving from theories of creation to humankind's discovery of the cosmos, to general relativity, to space missions, and beyond.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780345539434"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0345539435"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 396,
+          "printType": "BOOK",
+          "categories": [
+            "Science"
+          ],
+          "averageRating": 4.5,
+          "ratingsCount": 1665,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.1.0.0.preview.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=cDKODQAAQBAJ&pg=PP1&dq=cosmos&hl=&cd=1&source=gbs_api",
+          "infoLink": "http://books.google.com/books?id=cDKODQAAQBAJ&dq=cosmos&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Cosmos.html?hl=&id=cDKODQAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "US",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "US",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=cDKODQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Presents an illustrated guide to the universe and to Earth&#39;s relationship to it, moving from theories of creation to humankind&#39;s discovery of the cosmos, to general relativity, to space missions, and beyond."
+        }
+      },
+      "currentUser": {
+        "id": 2,
+        "username": "dantelombardi",
+        "password": "password",
+        "name": "",
+        "location": "",
+        "bio": ""
+      },
+      "id": 3
+    },
+    {
+      "book": {
+        "kind": "books#volume",
+        "id": "cF12H5ReX88C",
+        "etag": "wRENWygdBtg",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/cF12H5ReX88C",
+        "volumeInfo": {
+          "title": "Lost in the Cosmos",
+          "subtitle": "The Last Self-Help Book",
+          "authors": [
+            "Walker Percy"
+          ],
+          "publisher": "Open Road Media",
+          "publishedDate": "2011-03-29",
+          "description": "“A mock self-help book designed not to help but to provoke . . . to inveigle us into thinking about who we are and how we got into this mess.” (Los Angeles Times Book Review). Filled with quizzes, essays, short stories, and diagrams, Lost in the Cosmos is National Book Award–winning author Walker Percy’s humorous take on a familiar genre—as well as an invitation to serious contemplation of life’s biggest questions. One part parody and two parts philosophy, Lost in the Cosmos is an enlightening guide to the dilemmas of human existence, and an unrivaled spin on self-help manuals by one of modern America’s greatest literary masters.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781453216347"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1453216340"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": true
+          },
+          "pageCount": 256,
+          "printType": "BOOK",
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 3.5,
+          "ratingsCount": 9,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "0.14.15.0.preview.3",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=cF12H5ReX88C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=cF12H5ReX88C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=cF12H5ReX88C&printsec=frontcover&dq=cosmos&hl=&cd=2&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=cF12H5ReX88C&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=cF12H5ReX88C"
+        },
+        "saleInfo": {
+          "country": "US",
+          "saleability": "FOR_SALE_AND_RENTAL",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 10.99,
+            "currencyCode": "USD"
+          },
+          "retailPrice": {
+            "amount": 10.99,
+            "currencyCode": "USD"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=cF12H5ReX88C&rdid=book-cF12H5ReX88C&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 10990000,
+                "currencyCode": "USD"
+              },
+              "retailPrice": {
+                "amountInMicros": 10990000,
+                "currencyCode": "USD"
+              },
+              "giftable": true
+            },
+            {
+              "finskyOfferType": 3,
+              "listPrice": {
+                "amountInMicros": 2990000,
+                "currencyCode": "USD"
+              },
+              "retailPrice": {
+                "amountInMicros": 2690000,
+                "currencyCode": "USD"
+              },
+              "rentalDuration": {
+                "unit": "DAY",
+                "count": 3
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "US",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Lost_in_the_Cosmos-sample-epub.acsm?id=cF12H5ReX88C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Lost_in_the_Cosmos-sample-pdf.acsm?id=cF12H5ReX88C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=cF12H5ReX88C&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Filled with quizzes, essays, short stories, and diagrams, Lost in the Cosmos is National Book Award–winning author Walker Percy’s humorous take on a familiar genre—as well as an invitation to serious contemplation of life’s biggest ..."
+        }
+      },
+      "currentUser": {
+        "id": 2,
+        "username": "dantelombardi",
+        "password": "password",
+        "name": "",
+        "location": "",
+        "bio": ""
+      },
+      "id": 5
+    },
+    {
+      "book": {
+        "kind": "books#volume",
+        "id": "scpbDwAAQBAJ",
+        "etag": "r/ifGxodxfA",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/scpbDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Cosmos: Possible Worlds",
+          "authors": [
+            "Ann Druyan"
+          ],
+          "publisher": "National Geographic Books",
+          "publishedDate": "2020-02-25",
+          "description": "This sequel to Carl Sagan's blockbuster continues the electrifying journey through space and time, connecting with worlds billions of miles away and envisioning a future of science tempered with wisdom. Based on National Geographic's internationally-renowned television series, this groundbreaking and visually stunning book explores how science and civilization grew up together. From the emergence of life at deep-sea vents to solar-powered starships sailing through the galaxy, from the Big Bang to the intricacies of intelligence in many life forms, acclaimed author Ann Druyan documents where humanity has been and where it is going, using her unique gift of bringing complex scientific concepts to life. With evocative photographs and vivid illustrations, she recounts momentous discoveries, from the Voyager missions in which she and her husband, Carl Sagan, participated to Cassini-Huygens's recent insights into Saturn's moons. This breathtaking sequel to Sagan's masterpiece explains how we humans can glean a new understanding of consciousness here on Earth and out in the cosmos--again reminding us that our planet is a pale blue dot in an immense universe of possibility.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781426219092"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1426219091"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": false
+          },
+          "pageCount": 384,
+          "printType": "BOOK",
+          "categories": [
+            "Science"
+          ],
+          "averageRating": 5,
+          "ratingsCount": 1,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "1.5.3.0.preview.2",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=scpbDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=scpbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=scpbDwAAQBAJ&printsec=frontcover&dq=cosmos&hl=&cd=3&source=gbs_api",
+          "infoLink": "http://books.google.com/books?id=scpbDwAAQBAJ&dq=cosmos&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Cosmos_Possible_Worlds.html?hl=&id=scpbDwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "US",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "US",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Cosmos_Possible_Worlds-sample-epub.acsm?id=scpbDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=scpbDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "From the emergence of life at deep-sea vents to solar-powered starships sailing through the galaxy, from the Big Bang to the intricacies of intelligence in many life forms, acclaimed author Ann Druyan documents where humanity has been and ..."
+        }
+      },
+      "currentUser": {
+        "id": 2,
+        "username": "dantelombardi",
+        "password": "password",
+        "name": "",
+        "location": "",
+        "bio": ""
+      },
+      "id": 6
+    }
+  ],
   "comments": [
     {
       "id": 1,
@@ -190,6 +491,12 @@
       "username": "chautran",
       "comment": "Nice",
       "id": 14
+    },
+    {
+      "bookId": "cF12H5ReX88C",
+      "username": "dantelombardi",
+      "comment": "Yeehaw!",
+      "id": 15
     }
   ]
 }

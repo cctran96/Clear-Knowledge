@@ -51,7 +51,10 @@ class Profile extends Component {
                     currentUser={this.props.currentUser} 
                     favoriteBook = {this.props.favoriteBook}
                     favorites = {this.props.favorites}
-                    isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}/>
+                    isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}
+                    viewBookDetails = {this.props.viewBookDetails}
+                    currentBook = {this.props.currentBook}
+                    comments={this.props.comments}/>
             }
         }
       }

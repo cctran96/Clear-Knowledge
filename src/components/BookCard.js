@@ -24,7 +24,6 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
                 <button onClick={() => favoriteBook(book, currentUser)}>Remove from my library</button>:
                 <button onClick={() => favoriteBook(book, currentUser)}>Add to my library</button> }
                 <button onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
-                
             </div>
             {currentBook ? <div className='additional-info'>
                 <h3>Description:</h3>
