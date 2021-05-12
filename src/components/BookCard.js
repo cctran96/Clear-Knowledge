@@ -21,7 +21,7 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
             </div>
             <div>
                 <button onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
-                <button onClick={() => favoriteBook(book, currentUser)}>Add to my library</button>
+                {currentUser ? <button onClick={() => favoriteBook(book, currentUser)}>Add to my library</button> : null}
             </div>
             {currentBook ? <div className='additional-info'>
                 <h3>Description:</h3>
