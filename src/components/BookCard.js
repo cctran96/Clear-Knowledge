@@ -1,12 +1,12 @@
 import React from 'react'
 import CommentForm from '../components/CommentForm'
 
-const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment, favoriteBook}) => {
+const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment, favoriteBook, favorites, isAlreadyFavoriteCheck}) => {
     const info = book.volumeInfo
     const img = info.imageLinks ? info.imageLinks.thumbnail : 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg'
     const bookComments = comments ? comments.filter(comment => comment.bookId === book.id) : null
     const profilePic = 'https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-14.jpg'
-    console.log(bookComments)
+
     return (
         <div className='card hover'>
             <div className="card-body">
@@ -20,8 +20,9 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
                 </div>
             </div>
             <div>
-                <button onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
-                <button onClick={() => favoriteBook(book, currentUser)}>Add to my library</button>
+                {isAlreadyFavoriteCheck(book, currentUser) ? 
+                <button onClick={() => favoriteBook(book, currentUser)}>Remove from my library</button>:
+                <button onClick={() => favoriteBook(book, currentUser)}>Add to my library</button> }
             </div>
             {currentBook ? <div className='additional-info'>
                 <h3>Description:</h3>

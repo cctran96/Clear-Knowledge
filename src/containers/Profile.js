@@ -6,7 +6,13 @@ class Profile extends Component {
     filterBooks = (book) => {
         if(this.props.currentUser.username){
             if (book.currentUser.username === this.props.currentUser.username) {
-                return <BookCard key={book.book.id} book={book.book} currentUser={this.props.currentUser} favoriteBook = {this.props.favoriteBook}/>
+                return <BookCard 
+                    key={book.book.id} 
+                    book={book.book} 
+                    currentUser={this.props.currentUser} 
+                    favoriteBook = {this.props.favoriteBook}
+                    favorites = {this.props.favorites}
+                    isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}/>
             }
         }
       }

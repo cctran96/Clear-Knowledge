@@ -66,26 +66,57 @@ class App extends React.Component {
     this.setState({currentBook: this.state.currentBook ? '' : book})
   }
 
+  isAlreadyFavoriteCheck = (book, currentUser) => {
+    if(currentUser === null )
+    return false
+
+      let result = false
+        this.state.favorites.forEach(favBook => { 
+        if (favBook.book.id === book.id && favBook.currentUser.username === currentUser.username) {
+          result = true
+        }
+      })
+      return result
+    
+  }
+
   favoriteBook = (book, currentUser) => {
-    console.log("adding!")
-    const addedBook = {
-        book: book,
-        currentUser: currentUser
-    }
-    const postConfig = {
-        method: 'POST',
+    if (this.isAlreadyFavoriteCheck(book, currentUser)){
+      const deleteConfig = {
+        method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
-        },
-        body: JSON.stringify(addedBook)
+        }
+      }
+      let bookId = ''
+      this.state.favorites.forEach(favBook => {
+        if (favBook.book.id === book.id && favBook.currentUser.username === currentUser.username){
+          bookId = favBook.id
+        }
+      })
+      fetch(`http://localhost:3001/favorites/${bookId}`, deleteConfig)
+      this.setState({favorites: this.state.favorites.splice(bookId)})
+      
+    } else {
+      const addedBook = {
+          book: book,
+          currentUser: currentUser
+      }
+      const postConfig = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(addedBook)
+      }
+      if(currentUser !== null){
+        fetch('http://localhost:3001/favorites', postConfig)
+        .then(res => res.json())
+        .then(data => {this.setState({favorites: [...this.state.favorites, data]})})
+      }
     }
-    if(currentUser !== null){
-      fetch('http://localhost:3001/favorites', postConfig)
-      .then(res => res.json())
-      .then(data => {this.setState({favorites: [...this.state.favorites, data]})})
-    }
-    
 }
 
   render(){
@@ -103,15 +134,18 @@ class App extends React.Component {
               comments={this.state.comments} 
               currentBook={this.state.currentBook} 
               currentUser={this.state.currentUser} 
+              favorites = {this.state.favorites}
               handleNewComment={this.handleNewComment}
-              favoriteBook = {this.favoriteBook}/>}/>
+              favoriteBook = {this.favoriteBook}
+              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}/>}/>
             <Route path="/profile" render={() => <Profile 
               comments={this.state.comments} 
               currentBook={this.state.currentBook} 
               currentUser={this.state.currentUser} 
               favorites = {this.state.favorites}
               handleNewComment={this.handleNewComment}
-              favoriteBook = {this.favoriteBook}/>}/>
+              favoriteBook = {this.favoriteBook}
+              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}/>}/>
         </div>
       </Router>
     )

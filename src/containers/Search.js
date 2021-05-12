@@ -47,6 +47,8 @@ class Search extends Component {
                     comments={this.props.comments}
                     handleNewComment={this.props.handleNewComment}
                     favoriteBook = {this.props.favoriteBook}
+                    favorites = {this.props.favorites}
+                    isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}
                 />
             </div>
         )
