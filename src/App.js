@@ -17,7 +17,7 @@ class App extends React.Component {
     users: [],
     comments: [],
     favorites: [],
-    currentUser: null,
+    currentUser: '',
     currentBook: null
   }
 
