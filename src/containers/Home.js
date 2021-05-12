@@ -45,7 +45,7 @@ class Home extends Component {
             <div className='page-title home'>
                 {this.props.currentUser ? 
                 <div>
-                    <p>You are signed in as <i>{this.props.currentUser}</i></p>
+                    <p>You are signed in as <i>{this.props.currentUser.username}</i></p>
                     <button onClick={this.props.handleLogout}>Logout</button>
                 </div>
                 :

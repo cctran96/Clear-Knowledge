@@ -18,6 +18,7 @@ class App extends React.Component {
     comments: [],
     favorites: [],
     currentUser: null,
+    currentBook: null
   }
 
   componentDidMount(){
@@ -29,7 +30,7 @@ class App extends React.Component {
     e.preventDefault()
     fetchData(usersURL).then(data => {
         const passed = data.find(user => user.username === u && user.password === p)
-        passed ? this.setState({currentUser: u, username: '', password: ''}) : alert("The information you have entered is incorrect.")
+        passed ? this.setState({currentUser: passed}) : alert("The information you have entered is incorrect.")
     })
   } 
 
@@ -50,12 +51,17 @@ class App extends React.Component {
   createAccount = (e, u, p) => {
     e.preventDefault()
     this.state.users.includes(u) ? alert('There is already someone with that username!') 
-    :fetch(usersURL, postConfig({username: u, password: p})).then(r => r.json()).then(data => {
+    :fetch(usersURL, postConfig({username: u, password: p, name: "", location: "", bio: ""})).then(r => r.json()).then(data => {
+      console.log(data)
       this.setState(
-        {currentUser: data.username, 
+        {currentUser: data, 
           users: [...this.state.users, data.username]
         })
       })
+  }
+
+  viewBookDetails = book => {
+    this.setState({currentBook: this.state.currentBook ? '' : book})
   }
 
   render(){
@@ -65,8 +71,8 @@ class App extends React.Component {
             <Navbar />
             <Route exact path="/" component={() => <Home handleLogin={this.handleLogin} handleLogout={this.handleLogout} createAccount={this.createAccount} currentUser={this.state.currentUser}/>}/>
             <Route path="/aboutus" component={AboutUs}/>
-            <Route path="/search" render={() => <Search comments={this.state.comments} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
-            <Route path="/profile" component={() => <Profile comments={this.state.comments} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
+            <Route path="/search" render={() => <Search comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
+            <Route path="/profile" render={() => <Profile comments={this.state.comments} currentBook={this.state.currentBook} currentUser={this.state.currentUser} handleNewComment={this.handleNewComment}/>}/>
         </div>
       </Router>
     )

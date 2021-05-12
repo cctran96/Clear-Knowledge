@@ -3,62 +3,106 @@
     {
       "id": 1,
       "username": "chautran",
-      "password": "password"
+      "password": "password",
+      "name": "Chau Tran",
+      "location": "Hayward, CA",
+      "bio": "I say you too when the waiter tells me to enjoy my food."
     },
     {
-      "username": "Jasper",
+      "id": 2,
+      "username": "dantelombardi",
       "password": "password",
+      "name": "",
+      "location": "",
+      "bio": ""
+    },
+    {
+      "username": "jasperreed",
+      "password": "password",
+      "name": "",
+      "location": "",
+      "bio": "",
       "id": 3
     },
     {
-      "username": "Lantz",
+      "username": "lantzwarrick",
       "password": "password",
-      "id": 4
+      "id": 4,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
-      "username": "Marc",
+      "username": "marcrodriguez",
       "password": "password",
-      "id": 5
+      "id": 5,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
-      "username": "Diana",
+      "username": "diananunez",
       "password": "password",
-      "id": 6
+      "id": 6,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
-      "username": "Christian",
+      "username": "christianM",
       "password": "password",
-      "id": 7
+      "id": 7,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
-      "username": "Kyle",
+      "username": "kyletheaker",
       "password": "password",
-      "id": 8
+      "id": 8,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
       "username": "Miles",
       "password": "password",
-      "id": 9
+      "id": 9,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
-      "username": "Zach",
+      "username": "zachfrohardt",
       "password": "password",
-      "id": 10
+      "id": 10,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
-      "username": "Harman",
+      "username": "harmankaur",
       "password": "password",
-      "id": 11
+      "id": 11,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
       "username": "Johndhee",
       "password": "password",
-      "id": 12
+      "id": 12,
+      "name": "",
+      "location": "",
+      "bio": ""
     },
     {
-      "username": "Raymond",
+      "username": "raymondzhao",
       "password": "password",
-      "id": 13
+      "id": 13,
+      "name": "",
+      "location": "",
+      "bio": ""
     }
   ],
   "favorites": [
@@ -78,43 +122,43 @@
     {
       "id": 2,
       "bookId": "9cFdAAAAQBAJ",
-      "username": "Dante",
+      "username": "dantelombardi",
       "comment": "Nice chain ↓"
     },
     {
       "id": 3,
       "bookId": "jJ-s8snbHCIC",
-      "username": "Jasper",
+      "username": "jasperreedreed",
       "comment": "This book is boring."
     },
     {
       "id": 4,
       "bookId": "9cFdAAAAQBAJ",
-      "username": "Lantz",
+      "username": "lantzwarrick",
       "comment": "Nice"
     },
     {
       "id": 5,
       "bookId": "9cFdAAAAQBAJ",
-      "username": "Marc",
+      "username": "marcrodriguez",
       "comment": "Nice"
     },
     {
       "id": 6,
       "bookId": "9cFdAAAAQBAJ",
-      "username": "Diana",
+      "username": "diananunez",
       "comment": "Nice"
     },
     {
       "id": 7,
       "bookId": "9cFdAAAAQBAJ",
-      "username": "Christian",
+      "username": "christianM",
       "comment": "Nice"
     },
     {
       "id": 8,
       "bookId": "9cFdAAAAQBAJ",
-      "username": "Kyle",
+      "username": "kyletheaker",
       "comment": "Nice"
     },
     {
@@ -126,13 +170,13 @@
     {
       "id": 10,
       "bookId": "PGR2AwAAQBAJ",
-      "username": "Zach",
+      "username": "zachfrohardt",
       "comment": "Great story!"
     },
     {
       "id": 11,
       "bookId": "9cFdAAAAQBAJ",
-      "username": "Harman",
+      "username": "harmankaur",
       "comment": "Nice"
     },
     {
@@ -144,7 +188,7 @@
     {
       "id": 13,
       "bookId": "Pv5zZ9R4DskC",
-      "username": "Raymond",
+      "username": "raymondzhao",
       "comment": "Such an amazing book."
     },
     {
