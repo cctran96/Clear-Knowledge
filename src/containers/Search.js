@@ -19,9 +19,8 @@ class Search extends Component {
     fetchResults = e => {
         e.preventDefault()
         fetch(url + this.state.searchInput).then(r => r.json()).then(books => {
+            this.props.updateDisplayedBooks(books)
             this.setState({
-                books,
-                previousSearch: this.state.searchInput,
                 searchInput: ''
             })
         })
@@ -39,7 +38,7 @@ class Search extends Component {
                     fetchResults={this.fetchResults}
                 />
                 <SearchResults 
-                    books={this.state.books.items} 
+                    books={this.props.books.items} 
                     currentUser={this.props.currentUser} 
                     currentBook={this.props.currentBook}
                     viewBookDetails={this.props.viewBookDetails}

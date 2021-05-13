@@ -9,7 +9,7 @@ const ProfileForm = ({name, location, bio, submitChanges, handleChange}) => {
             <input onChange={e => handleChange(e)} type='text' name='location' value={location}/>
             <label>Bio: </label>
             <textarea onChange={e => handleChange(e)} type='text' name='bio' value={bio} className='bio'/>
-            <input type='submit' value='save changes'/>
+            <input className='save-btn' type='submit' value='save changes'/>
         </form>
     )
 }

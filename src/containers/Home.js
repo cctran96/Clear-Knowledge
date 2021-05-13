@@ -4,8 +4,10 @@ class Home extends Component {
     state={
         username: '',
         password: '',
+        remember: false,
         newUser: '',
-        newPass: ''
+        newPass: '',
+        confirmPass: ''
     }
 
     handleChange = e => {
@@ -34,9 +36,20 @@ class Home extends Component {
         login.className.includes('show') ? toggleBoth() : create.classList.toggle('show')
     }
 
-    newInfo = e => {
+    clearInput = () => {
+        this.props.handleLogout()
         this.setState({
-            [e.target.name] : e.target.value
+            username: '',
+            password: '',
+            newUser: '',
+            newPass: '',
+            confirmPass: ''
+        })
+    }
+
+    toggleRemember = () => {
+        this.setState({
+            remember: !this.state.remember
         })
     }
 
@@ -46,7 +59,7 @@ class Home extends Component {
                 {this.props.currentUser ? 
                 <div>
                     <p>You are signed in as <i>{this.props.currentUser.username}</i></p>
-                    <button onClick={this.props.handleLogout}>Logout</button>
+                    <button onClick={this.clearInput}>Logout</button>
                 </div>
                 :
                 <div>
@@ -54,21 +67,25 @@ class Home extends Component {
                     <button onClick={this.showAccount}>Create an account</button>
                     <div className='create'>
                         <h4>Glad that you're joining us!</h4>
-                        <form onSubmit={e => this.props.createAccount(e, this.state.newUser, this.state.newPass)}>
-                            <label>Enter a username: </label>
-                            <input type="text" name="newUser" value={this.state.newUser} onChange={this.newInfo}/>
-                            <label>Create your password: </label>
-                            <input type="password" name="newPass" value={this.state.newPass} onChange={this.newInfo}/>
+                        <form onSubmit={e => this.props.createAccount(e, this.state.newUser, this.state.newPass, this.state.confirmPass)}>
+                            <label>Enter a username:</label>
+                            <input type="text" name="newUser" value={this.state.newUser} onChange={this.handleChange}/>
+                            <label>Create your password:</label>
+                            <input type="password" name="newPass" value={this.state.newPass} onChange={this.handleChange}/>
                             <input className='submit-btn' type='submit' />
+                            <label>Confirm your password:</label>
+                            <input type="password" name="confirmPass" value={this.state.confirmPass} onChange={this.handleChange}/>
                         </form>
                     </div>
                     <div className='login'>
                         <h4>Welcome back!</h4>
-                        <form onSubmit={e => this.props.handleLogin(e, this.state.username, this.state.password)}>
+                        <form onSubmit={e => this.props.handleLogin(e, this.state.username, this.state.password, this.state.remember)}>
                             <label>Username: </label>
                             <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
                             <label>Password: </label>
                             <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                            <label>Remember me</label>
+                            <input type="checkbox" name="remember" onChange={this.toggleRemember}/>
                             <input className='submit-btn' type='submit' />
                         </form>
                     </div>

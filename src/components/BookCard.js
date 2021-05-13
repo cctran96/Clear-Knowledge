@@ -9,9 +9,9 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
 
     return (
         <div className='card hover'>
-            <div className="card-body">
+            <div className='card-body'>
                 <img src={img} alt={info.title}/>
-                <div className="card-info">
+                <div className='card-info'>
                     <p><i>{info.title}</i></p>
                     <p><b>{info.authors ? `by ${info.authors.join(' & ')}` : null}</b></p>
                     <p>Genre: {info.categories ?  info.categories.join(', ') : 'N/A'}</p>
@@ -21,9 +21,9 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
             </div>
             <div>
                 {isAlreadyFavoriteCheck(book, currentUser) ? 
-                <button onClick={() => favoriteBook(book, currentUser)}>Remove from my library</button>:
-                <button onClick={() => favoriteBook(book, currentUser)}>Add to my library</button> }
-                <button onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
+                <button className='remove-btn' onClick={() => favoriteBook(book, currentUser)}>Remove from my library</button>:
+                <button className='add-btn' onClick={() => favoriteBook(book, currentUser)}>Add to my library</button> }
+                <button className='view-btn' onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
             </div>
             {currentBook ? <div className='additional-info'>
                 <h3>Description:</h3>

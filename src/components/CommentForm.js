@@ -23,7 +23,7 @@ class SearchForm extends Component {
         return(
             <form onSubmit={e => this.submitComment(e)}>
                 <input onChange={e => this.handleChange(e)} type='text' value={this.state.input} placeholder='Add a new comment...'/>
-                <input type='submit' value='submit'/>
+                <input className='add-comment' type='submit' value='submit'/>
             </form>
         )
     }

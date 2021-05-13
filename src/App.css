@@ -115,15 +115,34 @@ body {
   display: block;
 }
 
+button, .save-btn, .add-comment{
+  padding: 0.2em 1.5em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 20rem;
+  transition: all 300ms ease-in-out;
+}
+
 .home button {
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  color: black;
+  border-color: whitesmoke;
+  box-shadow: 0 0 40px 40px whitesmoke inset, 0 0 0 0 whitesmoke;
+}
+
+.home button:hover {
+  box-shadow: 0 0 10px 0 whitesmoke inset, 0 0 10px 4px whitesmoke;
+  color: white;
 }
 
 /* Cards */
 .hover:hover {
-  cursor: pointer;
   background-color: rgb(228, 222, 222);
   color: black;
 }
@@ -140,9 +159,56 @@ body {
   transition: 0.5s;
 }
 
+.add-btn, .add-comment {
+  color: green;
+  border-color: green;
+  box-shadow: 0 0 40px 40px white inset, 0 0 0 0 green;
+}
+
+.add-btn:hover, .add-comment:hover {
+  box-shadow: 0 0 10px 0 green inset, 0 0 10px 4px green;
+  color: black;
+}
+
+.add-comment {
+  margin: 10px;
+}
+
+.comments button, .remove-btn {
+  color: red;
+  border-color: red;
+  box-shadow: 0 0 40px 40px white inset, 0 0 0 0 red;
+}
+
+.comments button:hover, .remove-btn:hover {
+  box-shadow: 0 0 10px 0 red inset, 0 0 10px 4px red;
+  color: black;
+}
+
+.view-btn {
+  color: blue;
+  border-color: blue;
+  box-shadow: 0 0 40px 40px white inset, 0 0 0 0 blue;
+}
+
+.view-btn:hover {
+  box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+  color: black;
+}
+
+.save-btn {
+  color: black;
+  border-color: white;
+  box-shadow: 0 0 40px 40px white inset, 0 0 0 0 white;
+}
+
+.save-btn:hover {
+  box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
+  color: white;
+}
+
 .card button {
     margin: 10px 10px 25px 10px;
-
 }
 
 .card-body {

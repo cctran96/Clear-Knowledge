@@ -83,9 +83,10 @@ class Profile extends Component {
                             <p>{this.state.location}</p>
                             <p>{this.state.bio}</p>
                         </div>}
-                        {this.state.edit ? null : <button onClick={this.handleEdit}>Edit Profile</button>}
+                        {this.state.edit ? null : <button className='save-btn' onClick={this.handleEdit}>Edit Profile</button>}
                     </div>
-                    {this.props.currentBook ? 
+                    <div className='card-container'>
+                        {this.props.currentBook ? 
                             <BookCard 
                                 book={this.props.currentBook} 
                                 currentBook={this.props.currentBook} 
@@ -99,6 +100,7 @@ class Profile extends Component {
                                 removeComment = {this.props.removeComment}
                             />
                         : this.props.favorites.map(book => this.filterBooks(book))}
+                    </div>
                 </div> :
                 <div>
                     <h2>Log in to access your profile</h2>
