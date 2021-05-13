@@ -55,7 +55,8 @@ class Profile extends Component {
                     isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}
                     viewBookDetails = {this.props.viewBookDetails}
                     currentBook = {this.props.currentBook}
-                    comments={this.props.comments}/>
+                    comments={this.props.comments}
+                    removeComment = {this.props.removeComment}/>
             }
         }
       }
@@ -95,6 +96,7 @@ class Profile extends Component {
                                 favoriteBook = {this.props.favoriteBook}
                                 favorites = {this.props.favorites}
                                 isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}
+                                removeComment = {this.props.removeComment}
                             />
                         : this.props.favorites.map(book => this.filterBooks(book))}
                 </div> :

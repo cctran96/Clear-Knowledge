@@ -1,7 +1,7 @@
 import React from 'react'
 import CommentForm from '../components/CommentForm'
 
-const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment, favoriteBook, favorites, isAlreadyFavoriteCheck}) => {
+const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment, favoriteBook, favorites, isAlreadyFavoriteCheck, removeComment}) => {
     const info = book.volumeInfo
     const img = info.imageLinks ? info.imageLinks.thumbnail : 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg'
     const bookComments = comments ? comments.filter(comment => comment.bookId === book.id) : null
@@ -36,7 +36,9 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
                             <li key={comment.id}>
                                 <img src={profilePic} alt={`${comment.username}'s profile`}/>
                                 <p><b>{comment.username}</b><br/>{comment.comment}</p>
-                            </li>
+                                {comment.username === currentUser.username? <button className = {comment.id} onClick = {(e) => removeComment(e.target.className)}> Remove Comment</button>
+                                : null}
+                            </li >
                         )
                     })}
                 </ul>}

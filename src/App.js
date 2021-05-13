@@ -80,6 +80,20 @@ class App extends React.Component {
     
   }
 
+  removeComment = (e) => {
+    //removing comment
+    const deleteConfig = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }
+    console.log(e)
+    fetch(`http://localhost:3001/comments/${e}`, deleteConfig)
+    this.setState({comments: this.state.comments.filter((comment)=> comment.id != e)})
+  }
+
   favoriteBook = (book, currentUser) => {
     if (this.isAlreadyFavoriteCheck(book, currentUser)){
       const deleteConfig = {
@@ -139,6 +153,7 @@ class App extends React.Component {
               favoriteBook = {this.favoriteBook}
               isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}
               viewBookDetails={this.viewBookDetails}
+              removeComment = {this.removeComment}
               />}/>
             <Route path="/profile" render={() => <Profile 
               comments={this.state.comments} 
@@ -149,6 +164,7 @@ class App extends React.Component {
               favoriteBook = {this.favoriteBook}
               isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}
               viewBookDetails={this.viewBookDetails}
+              removeComment = {this.removeComment}
               />}/>
         </div>
       </Router>
