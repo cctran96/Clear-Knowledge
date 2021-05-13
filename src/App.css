@@ -222,6 +222,8 @@ button, .save-btn, .add-comment{
 .card-body img {
   justify-content: flex-start;
   margin-right: 30px;
+  width: 120px;
+  height: 200px;
 }
 
 .card-info {

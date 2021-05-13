@@ -20,9 +20,9 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
                 </div>
             </div>
             <div>
-                {isAlreadyFavoriteCheck(book, currentUser) ? 
+                {currentUser ? (isAlreadyFavoriteCheck(book, currentUser) ? 
                 <button className='remove-btn' onClick={() => favoriteBook(book, currentUser)}>Remove from my library</button>:
-                <button className='add-btn' onClick={() => favoriteBook(book, currentUser)}>Add to my library</button> }
+                <button className='add-btn' onClick={() => favoriteBook(book, currentUser)}>Add to my library</button>) : null}
                 <button className='view-btn' onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
             </div>
             {currentBook ? <div className='additional-info'>
