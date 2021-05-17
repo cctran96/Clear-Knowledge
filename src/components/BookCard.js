@@ -1,12 +1,12 @@
 import React from 'react'
 import CommentForm from '../components/CommentForm'
 
-const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment, favoriteBook, favorites, isAlreadyFavoriteCheck, removeComment}) => {
+const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, handleNewComment, favoriteBook, favorites, removeComment}) => {
     const info = book.volumeInfo
     const img = info.imageLinks ? info.imageLinks.thumbnail : 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg'
     const bookComments = comments ? comments.filter(comment => comment.bookId === book.id) : null
+    const found = favorites ? favorites.find(favoritedBook => favoritedBook.book.id === book.id) : null
     const profilePic = 'https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-14.jpg'
-
     return (
         <div className='card hover'>
             <div className='card-body'>
@@ -20,9 +20,8 @@ const BookCard = ({book, currentUser, currentBook, viewBookDetails, comments, ha
                 </div>
             </div>
             <div>
-                {currentUser ? (isAlreadyFavoriteCheck(book, currentUser) ? 
-                <button className='remove-btn' onClick={() => favoriteBook(book, currentUser)}>Remove from my library</button>:
-                <button className='add-btn' onClick={() => favoriteBook(book, currentUser)}>Add to my library</button>) : null}
+                {currentUser ? (found ? <button className='remove-btn' onClick={() => favoriteBook(book, currentUser.username)}>Remove from my library</button> :
+                <button className='add-btn' onClick={() => favoriteBook(book, currentUser.username)}>Add to my library</button>) : null}
                 <button className='view-btn' onClick={() => viewBookDetails(book)}>{currentBook ? 'Return' : 'View description'}</button>
             </div>
             {currentBook ? <div className='additional-info'>

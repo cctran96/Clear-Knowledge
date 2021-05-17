@@ -43,26 +43,9 @@ class Profile extends Component {
         .then(this.setState({edit: !this.state.edit}))
     }
 
-    filterBooks = (book) => {
-        if(this.props.currentUser.username){
-            if (book.currentUser.username === this.props.currentUser.username) {
-                return <BookCard 
-                    key={book.book.id} 
-                    book={book.book} 
-                    currentUser={this.props.currentUser} 
-                    favoriteBook = {this.props.favoriteBook}
-                    favorites = {this.props.favorites}
-                    isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}
-                    viewBookDetails = {this.props.viewBookDetails}
-                    currentBook = {this.props.currentBook}
-                    comments={this.props.comments}
-                    removeComment = {this.props.removeComment}/>
-            }
-        }
-      }
-
     render(){
         const user = this.props.currentUser
+        const filteredBooks = this.props.favorites.filter(book => book.username === this.props.currentUser.username)
         return(
             <div className='page-title'>
                 {user ?
@@ -96,10 +79,22 @@ class Profile extends Component {
                                 comments = {this.props.comments}
                                 favoriteBook = {this.props.favoriteBook}
                                 favorites = {this.props.favorites}
-                                isAlreadyFavoriteCheck = {this.props.isAlreadyFavoriteCheck}
                                 removeComment = {this.props.removeComment}
                             />
-                        : this.props.favorites.map(book => this.filterBooks(book))}
+                        : filteredBooks.map(book => 
+                            <BookCard
+                            key={book.book.id}
+                            book={book.book} 
+                            currentBook={this.props.currentBook} 
+                            currentUser={this.props.currentUser}
+                            viewBookDetails={this.props.viewBookDetails}
+                            handleNewComment={this.props.handleNewComment}
+                            comments = {this.props.comments}
+                            favoriteBook = {this.props.favoriteBook}
+                            favorites = {this.props.favorites}
+                            removeComment = {this.props.removeComment}
+                            />
+                        )}
                     </div>
                 </div> :
                 <div>

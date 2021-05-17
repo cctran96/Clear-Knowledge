@@ -103,480 +103,90 @@
       "name": "",
       "location": "",
       "bio": ""
+    },
+    {
+      "username": "jackblack",
+      "password": "password",
+      "name": "",
+      "location": "",
+      "bio": "",
+      "id": 14
     }
   ],
   "favorites": [
     {
+      "username": "chautran",
       "book": {
         "kind": "books#volume",
-        "id": "cDKODQAAQBAJ",
-        "etag": "vdMJBhsNdjQ",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/cDKODQAAQBAJ",
+        "id": "A-JIAAAAYAAJ",
+        "etag": "whi3xtsx2H4",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/A-JIAAAAYAAJ",
         "volumeInfo": {
-          "title": "Cosmos",
+          "title": "The American Shropshire Sheep Record",
           "authors": [
-            "Carl Sagan"
+            "Mortimer Levering"
           ],
-          "publisher": "Ballantine Books",
-          "publishedDate": "2013",
-          "description": "Presents an illustrated guide to the universe and to Earth's relationship to it, moving from theories of creation to humankind's discovery of the cosmos, to general relativity, to space missions, and beyond.",
+          "publishedDate": "1922",
+          "description": "Includes constitution, rules and breeders of the Association.",
           "industryIdentifiers": [
             {
-              "type": "ISBN_13",
-              "identifier": "9780345539434"
-            },
-            {
-              "type": "ISBN_10",
-              "identifier": "0345539435"
+              "type": "OTHER",
+              "identifier": "CORNELL:31924089854099"
             }
           ],
           "readingModes": {
             "text": false,
-            "image": false
+            "image": true
           },
-          "pageCount": 396,
           "printType": "BOOK",
           "categories": [
-            "Science"
+            "Sheep"
           ],
-          "averageRating": 4.5,
-          "ratingsCount": 1665,
           "maturityRating": "NOT_MATURE",
           "allowAnonLogging": false,
-          "contentVersion": "0.1.0.0.preview.0",
+          "contentVersion": "0.2.1.0.full.1",
           "panelizationSummary": {
             "containsEpubBubbles": false,
             "containsImageBubbles": false
           },
           "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            "smallThumbnail": "http://books.google.com/books/content?id=A-JIAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=A-JIAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
           },
           "language": "en",
-          "previewLink": "http://books.google.com/books?id=cDKODQAAQBAJ&pg=PP1&dq=cosmos&hl=&cd=1&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=cDKODQAAQBAJ&dq=cosmos&hl=&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Cosmos.html?hl=&id=cDKODQAAQBAJ"
+          "previewLink": "http://books.google.com/books?id=A-JIAAAAYAAJ&pg=PA525&dq=harman&hl=&cd=1&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=A-JIAAAAYAAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=A-JIAAAAYAAJ"
         },
         "saleInfo": {
           "country": "US",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
+          "saleability": "FREE",
+          "isEbook": true,
+          "buyLink": "https://play.google.com/store/books/details?id=A-JIAAAAYAAJ&rdid=book-A-JIAAAAYAAJ&rdot=1&source=gbs_api"
         },
         "accessInfo": {
           "country": "US",
-          "viewability": "PARTIAL",
+          "viewability": "ALL_PAGES",
           "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+          "publicDomain": true,
+          "textToSpeechPermission": "ALLOWED",
           "epub": {
-            "isAvailable": false
+            "isAvailable": false,
+            "downloadLink": "http://books.google.com/books/download/The_American_Shropshire_Sheep_Record.epub?id=A-JIAAAAYAAJ&hl=&output=epub&source=gbs_api"
           },
           "pdf": {
-            "isAvailable": false
+            "isAvailable": true,
+            "downloadLink": "http://books.google.com/books/download/The_American_Shropshire_Sheep_Record.pdf?id=A-JIAAAAYAAJ&hl=&output=pdf&sig=ACfU3U1YhJD2_AFlv2-poobGCshS038S3A&source=gbs_api"
           },
-          "webReaderLink": "http://play.google.com/books/reader?id=cDKODQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
+          "webReaderLink": "http://play.google.com/books/reader?id=A-JIAAAAYAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "FULL_PUBLIC_DOMAIN",
           "quoteSharingAllowed": false
         },
         "searchInfo": {
-          "textSnippet": "Presents an illustrated guide to the universe and to Earth&#39;s relationship to it, moving from theories of creation to humankind&#39;s discovery of the cosmos, to general relativity, to space missions, and beyond."
+          "textSnippet": "467512 A . J . <b>Harman</b> 15 . Ear Mark , 15 <b>Harman</b> . Lambed , Mar . 1916 . Sire , G <br>\n. F . Shuman 146 , 405776 . Dam , G . F . Shuman 75 , 384243 . Br . , A . J . <br>\n<b>Harman</b> . Or . , N . E . <b>Harman</b> , 467513 A . J . <b>Harman</b> 12 . Ear Mark , 12 <b>Harman</b> <br>\n."
         }
-      },
-      "currentUser": {
-        "id": 2,
-        "username": "dantelombardi",
-        "password": "password",
-        "name": "",
-        "location": "",
-        "bio": ""
       },
       "id": 3
-    },
-    {
-      "book": {
-        "kind": "books#volume",
-        "id": "cF12H5ReX88C",
-        "etag": "wRENWygdBtg",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/cF12H5ReX88C",
-        "volumeInfo": {
-          "title": "Lost in the Cosmos",
-          "subtitle": "The Last Self-Help Book",
-          "authors": [
-            "Walker Percy"
-          ],
-          "publisher": "Open Road Media",
-          "publishedDate": "2011-03-29",
-          "description": "“A mock self-help book designed not to help but to provoke . . . to inveigle us into thinking about who we are and how we got into this mess.” (Los Angeles Times Book Review). Filled with quizzes, essays, short stories, and diagrams, Lost in the Cosmos is National Book Award–winning author Walker Percy’s humorous take on a familiar genre—as well as an invitation to serious contemplation of life’s biggest questions. One part parody and two parts philosophy, Lost in the Cosmos is an enlightening guide to the dilemmas of human existence, and an unrivaled spin on self-help manuals by one of modern America’s greatest literary masters.",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_13",
-              "identifier": "9781453216347"
-            },
-            {
-              "type": "ISBN_10",
-              "identifier": "1453216340"
-            }
-          ],
-          "readingModes": {
-            "text": true,
-            "image": true
-          },
-          "pageCount": 256,
-          "printType": "BOOK",
-          "categories": [
-            "Fiction"
-          ],
-          "averageRating": 3.5,
-          "ratingsCount": 9,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": true,
-          "contentVersion": "0.14.15.0.preview.3",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=cF12H5ReX88C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=cF12H5ReX88C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=cF12H5ReX88C&printsec=frontcover&dq=cosmos&hl=&cd=2&source=gbs_api",
-          "infoLink": "https://play.google.com/store/books/details?id=cF12H5ReX88C&source=gbs_api",
-          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=cF12H5ReX88C"
-        },
-        "saleInfo": {
-          "country": "US",
-          "saleability": "FOR_SALE_AND_RENTAL",
-          "isEbook": true,
-          "listPrice": {
-            "amount": 10.99,
-            "currencyCode": "USD"
-          },
-          "retailPrice": {
-            "amount": 10.99,
-            "currencyCode": "USD"
-          },
-          "buyLink": "https://play.google.com/store/books/details?id=cF12H5ReX88C&rdid=book-cF12H5ReX88C&rdot=1&source=gbs_api",
-          "offers": [
-            {
-              "finskyOfferType": 1,
-              "listPrice": {
-                "amountInMicros": 10990000,
-                "currencyCode": "USD"
-              },
-              "retailPrice": {
-                "amountInMicros": 10990000,
-                "currencyCode": "USD"
-              },
-              "giftable": true
-            },
-            {
-              "finskyOfferType": 3,
-              "listPrice": {
-                "amountInMicros": 2990000,
-                "currencyCode": "USD"
-              },
-              "retailPrice": {
-                "amountInMicros": 2690000,
-                "currencyCode": "USD"
-              },
-              "rentalDuration": {
-                "unit": "DAY",
-                "count": 3
-              }
-            }
-          ]
-        },
-        "accessInfo": {
-          "country": "US",
-          "viewability": "PARTIAL",
-          "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": true,
-            "acsTokenLink": "http://books.google.com/books/download/Lost_in_the_Cosmos-sample-epub.acsm?id=cF12H5ReX88C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-          },
-          "pdf": {
-            "isAvailable": true,
-            "acsTokenLink": "http://books.google.com/books/download/Lost_in_the_Cosmos-sample-pdf.acsm?id=cF12H5ReX88C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=cF12H5ReX88C&hl=&printsec=frontcover&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
-          "quoteSharingAllowed": false
-        },
-        "searchInfo": {
-          "textSnippet": "Filled with quizzes, essays, short stories, and diagrams, Lost in the Cosmos is National Book Award–winning author Walker Percy’s humorous take on a familiar genre—as well as an invitation to serious contemplation of life’s biggest ..."
-        }
-      },
-      "currentUser": {
-        "id": 2,
-        "username": "dantelombardi",
-        "password": "password",
-        "name": "",
-        "location": "",
-        "bio": ""
-      },
-      "id": 5
-    },
-    {
-      "book": {
-        "kind": "books#volume",
-        "id": "cDKODQAAQBAJ",
-        "etag": "wSC0FIJoTPs",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/cDKODQAAQBAJ",
-        "volumeInfo": {
-          "title": "Cosmos",
-          "authors": [
-            "Carl Sagan"
-          ],
-          "publisher": "Ballantine Books",
-          "publishedDate": "2013",
-          "description": "Presents an illustrated guide to the universe and to Earth's relationship to it, moving from theories of creation to humankind's discovery of the cosmos, to general relativity, to space missions, and beyond.",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_13",
-              "identifier": "9780345539434"
-            },
-            {
-              "type": "ISBN_10",
-              "identifier": "0345539435"
-            }
-          ],
-          "readingModes": {
-            "text": false,
-            "image": false
-          },
-          "pageCount": 396,
-          "printType": "BOOK",
-          "categories": [
-            "Science"
-          ],
-          "averageRating": 4.5,
-          "ratingsCount": 1665,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "0.1.0.0.preview.0",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=cDKODQAAQBAJ&pg=PP1&dq=cosmos&hl=&cd=1&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=cDKODQAAQBAJ&dq=cosmos&hl=&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Cosmos.html?hl=&id=cDKODQAAQBAJ"
-        },
-        "saleInfo": {
-          "country": "US",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
-        },
-        "accessInfo": {
-          "country": "US",
-          "viewability": "PARTIAL",
-          "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
-          "epub": {
-            "isAvailable": false
-          },
-          "pdf": {
-            "isAvailable": false
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=cDKODQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
-          "quoteSharingAllowed": false
-        },
-        "searchInfo": {
-          "textSnippet": "Presents an illustrated guide to the universe and to Earth&#39;s relationship to it, moving from theories of creation to humankind&#39;s discovery of the cosmos, to general relativity, to space missions, and beyond."
-        }
-      },
-      "currentUser": {
-        "id": 2,
-        "username": "dantelombardi",
-        "password": "password",
-        "name": "",
-        "location": "",
-        "bio": ""
-      },
-      "id": 6
-    },
-    {
-      "book": {
-        "kind": "books#volume",
-        "id": "JuDInK3YtyMC",
-        "etag": "yE/+lTvvSW0",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/JuDInK3YtyMC",
-        "volumeInfo": {
-          "title": "The Essential Calvin And Hobbes",
-          "authors": [
-            "Bill Watterson"
-          ],
-          "publisher": "Andrews McMeel Publishing",
-          "publishedDate": "1988",
-          "description": "The Essential Calvin and Hobbes is an over-size anthology-type book including an original 16-page story and color Sunday cartoons.",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_10",
-              "identifier": "0836218051"
-            },
-            {
-              "type": "ISBN_13",
-              "identifier": "9780836218053"
-            }
-          ],
-          "readingModes": {
-            "text": false,
-            "image": true
-          },
-          "pageCount": 254,
-          "printType": "BOOK",
-          "categories": [
-            "Comics & Graphic Novels"
-          ],
-          "averageRating": 4.5,
-          "ratingsCount": 54,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "0.1.3.0.preview.1",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "comicsContent": true,
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=JuDInK3YtyMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=JuDInK3YtyMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=JuDInK3YtyMC&pg=PP1&dq=calvin+and+hobbes&hl=&cd=1&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=JuDInK3YtyMC&dq=calvin+and+hobbes&hl=&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/The_Essential_Calvin_And_Hobbes.html?hl=&id=JuDInK3YtyMC"
-        },
-        "saleInfo": {
-          "country": "US",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
-        },
-        "accessInfo": {
-          "country": "US",
-          "viewability": "PARTIAL",
-          "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": false
-          },
-          "pdf": {
-            "isAvailable": false
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=JuDInK3YtyMC&hl=&printsec=frontcover&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
-          "quoteSharingAllowed": false
-        },
-        "searchInfo": {
-          "textSnippet": "The Essential Calvin and Hobbes is an over-size anthology-type book including an original 16-page story and color Sunday cartoons."
-        }
-      },
-      "currentUser": {
-        "id": 2,
-        "username": "dantelombardi",
-        "password": "password",
-        "name": "",
-        "location": "",
-        "bio": ""
-      },
-      "id": 7
-    },
-    {
-      "book": {
-        "kind": "books#volume",
-        "id": "cDKODQAAQBAJ",
-        "etag": "hZny7oKISJM",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/cDKODQAAQBAJ",
-        "volumeInfo": {
-          "title": "Cosmos",
-          "authors": [
-            "Carl Sagan"
-          ],
-          "publisher": "Ballantine Books",
-          "publishedDate": "2013",
-          "description": "Presents an illustrated guide to the universe and to Earth's relationship to it, moving from theories of creation to humankind's discovery of the cosmos, to general relativity, to space missions, and beyond.",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_13",
-              "identifier": "9780345539434"
-            },
-            {
-              "type": "ISBN_10",
-              "identifier": "0345539435"
-            }
-          ],
-          "readingModes": {
-            "text": false,
-            "image": false
-          },
-          "pageCount": 396,
-          "printType": "BOOK",
-          "categories": [
-            "Science"
-          ],
-          "averageRating": 4.5,
-          "ratingsCount": 1665,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "0.1.0.0.preview.0",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=cDKODQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=cDKODQAAQBAJ&pg=PP1&dq=cosmos&hl=&cd=1&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=cDKODQAAQBAJ&dq=cosmos&hl=&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Cosmos.html?hl=&id=cDKODQAAQBAJ"
-        },
-        "saleInfo": {
-          "country": "US",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
-        },
-        "accessInfo": {
-          "country": "US",
-          "viewability": "PARTIAL",
-          "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
-          "epub": {
-            "isAvailable": false
-          },
-          "pdf": {
-            "isAvailable": false
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=cDKODQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
-          "quoteSharingAllowed": false
-        },
-        "searchInfo": {
-          "textSnippet": "Presents an illustrated guide to the universe and to Earth&#39;s relationship to it, moving from theories of creation to humankind&#39;s discovery of the cosmos, to general relativity, to space missions, and beyond."
-        }
-      },
-      "currentUser": {
-        "id": 2,
-        "username": "dantelombardi",
-        "password": "password",
-        "name": "",
-        "location": "",
-        "bio": ""
-      },
-      "id": 8
     }
   ],
   "comments": [

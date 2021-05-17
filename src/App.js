@@ -9,7 +9,7 @@ import Search from './containers/Search'
 
 const usersURL = 'http://localhost:3001/users/'
 const commentsURL = 'http://localhost:3001/comments'
-const favoritesURL = 'http://localhost:3001/favorites'
+const favoritesURL = 'http://localhost:3001/favorites/'
 const rememberedURL = 'http://localhost:3001/rememberedUser/1'
 const fetchData = url => fetch(url).then(r => r.json())
 const postConfig = body => ({method: 'POST',headers: {'Content-Type': 'application/json','Accept': 'application/json'},body: JSON.stringify(body)})
@@ -29,6 +29,7 @@ class App extends React.Component {
     fetchData(usersURL).then(users => {
       fetchData(rememberedURL).then(u => {
         const remembered = users.find(user => user.username === u.username)
+        remembered ? delete remembered['password'] : console.log('X')
         this.setState({
           currentUser: remembered ? remembered : '',
           users: users.map(user => user.username)
@@ -41,12 +42,13 @@ class App extends React.Component {
 
   handleLogin = (e, user, pass, remember) => {
     e.preventDefault()
-    fetchData(usersURL).then(data => {
+    fetchData(usersURL).then(users => {
       const signIn = () => {
-        remember ? fetch(rememberedURL, patchConfig({username: user})) : console.log('Not remembering')
+        remember ? fetch(rememberedURL, patchConfig({username: user})) : console.log('X')
+        delete passed['password']
         this.setState({currentUser: passed})
       }
-      const passed = data.find(loggedUser => loggedUser.username === user && loggedUser.password === pass)
+      const passed = users.find(loggedUser => loggedUser.username === user && loggedUser.password === pass)
       passed ? signIn() : alert("The information you have entered is incorrect.")
     })
   } 
@@ -70,6 +72,7 @@ class App extends React.Component {
       fetch(usersURL, postConfig({username: user, password: pass, name: '', location: '', bio: ''}))
       .then(r => r.json())
       .then(data => {
+        delete data['password']
         this.setState(
           {currentUser: data, 
             users: [...this.state.users, data.username]
@@ -87,63 +90,18 @@ class App extends React.Component {
     this.setState({books: bookData})
   }
 
-  isAlreadyFavoriteCheck = (book, currentUser) => {
-    if(currentUser === null )
-    return false
-
-      let result = false
-        this.state.favorites.forEach(favBook => { 
-        if (favBook.book.id === book.id && favBook.currentUser.username === currentUser.username) {
-          result = true
-        }
-      })
-      return result
-  }
-
   removeComment = (e) => {
-    //removing comment
-    const deleteConfig = {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    }
-    console.log(e)
-    fetch(`http://localhost:3001/comments/${e}`, deleteConfig)
+    fetch(`http://localhost:3001/comments/${e}`, {method:'DELETE'})
     this.setState({comments: this.state.comments.filter((comment)=> comment.id !== parseInt(e))})
   }
 
-  favoriteBook = (book, currentUser) => {
-    if (this.isAlreadyFavoriteCheck(book, currentUser)){
-      const deleteConfig = {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }
-      let bookId = ''
-      this.state.favorites.forEach(favBook => {
-        if (favBook.book.id === book.id && favBook.currentUser.username === currentUser.username){
-          bookId = favBook.id
-        }
-      })
-      fetch(`http://localhost:3001/favorites/${bookId}`, deleteConfig)
-      this.setState({favorites: this.state.favorites.splice(bookId)})
-      
-    } else {
-      const addedBook = {
-          book: book,
-          currentUser: currentUser
-      }
-  
-      if(currentUser !== null){
-        fetch('http://localhost:3001/favorites', postConfig(addedBook))
-        .then(res => res.json())
-        .then(data => {this.setState({favorites: [...this.state.favorites, data]})})
-      }
-    }
+  favoriteBook = (book, username) => {
+    const found = this.state.favorites.find(favoritedBook => favoritedBook.book.id === book.id)
+    found ? 
+    fetch(favoritesURL + found.id, {method: 'DELETE'})
+    .then(this.setState({favorites: this.state.favorites.filter(favoritedBook => favoritedBook.book.id !== book.id)})) :
+    fetch(favoritesURL, postConfig({username: username, book: book})).then(r => r.json())
+    .then(book => this.setState({favorites: [...this.state.favorites, book]}))
 }
 
   render(){
@@ -165,7 +123,6 @@ class App extends React.Component {
               favorites = {this.state.favorites}
               handleNewComment={this.handleNewComment}
               favoriteBook = {this.favoriteBook}
-              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}
               viewBookDetails={this.viewBookDetails}
               updateDisplayedBooks={this.updateDisplayedBooks}
               removeComment = {this.removeComment}
@@ -177,7 +134,6 @@ class App extends React.Component {
               favorites = {this.state.favorites}
               handleNewComment={this.handleNewComment}
               favoriteBook = {this.favoriteBook}
-              isAlreadyFavoriteCheck = {this.isAlreadyFavoriteCheck}
               viewBookDetails={this.viewBookDetails}
               removeComment = {this.removeComment}
               />}/>
